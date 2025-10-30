@@ -18,3 +18,13 @@ Book.prototype.info = function () {
 function addBookToLibrary(book) {
   library.push(book);
 }
+
+const addBtn = document.getElementById("add");
+const titleInput = document.getElementById("title");
+const authorInput = document.getElementById("author");
+const readInput = document.getElementById("read");
+
+addBtn.addEventListener("click", () => {
+  if (!titleInput.value || !authorInput.value)
+    alert("Please fill in all fields");
+});
