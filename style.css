@@ -30,6 +30,14 @@ input {
   padding-left: 5px;
 }
 
+button {
+  border: none;
+  border-radius: 5px;
+  width: 70px;
+  color: var(--text);
+  background-color: var(--bg-lighter);
+}
+
 .title {
   color: var(--text-light);
   margin-bottom: 1rem;
