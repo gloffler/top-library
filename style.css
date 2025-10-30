@@ -4,6 +4,7 @@
   --text-light: white;
   --bg-dark: hsl(0, 0%, 4%);
   --bg-lighter: hsl(0, 0%, 15%);
+  --bg-lighter-hover: hsl(0, 0%, 20%);
 }
 
 * {
@@ -41,6 +42,11 @@ button {
   width: 70px;
   color: var(--text);
   background-color: var(--bg-lighter);
+}
+
+button:hover {
+  background-color: var(--bg-lighter-hover);
+  transition: background-color 150ms ease;
 }
 
 .title {
