@@ -20,6 +20,11 @@ body {
   justify-content: center;
 }
 
+input[type="checkbox"],
+button {
+  cursor: pointer;
+}
+
 input {
   outline: none;
   height: 100%;
