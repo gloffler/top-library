@@ -80,7 +80,12 @@ addBtn.addEventListener("click", () => {
 });
 
 // Demo content
-addBookToLibrary(new Book("The Hobbit", "Keine Ahnung", 222, true));
-addBookToLibrary(new Book("I'm gay", "Alois Preisinger", 562, false));
+addBookToLibrary(
+  new Book("The Pragmatic Programmer", "Andrew Hunt", 352, true)
+);
+addBookToLibrary(new Book("Clean Code", "Robert C. Martin", 464, false));
+addBookToLibrary(
+  new Book("Eloquent JavaScript", "Marijn Haverbeke", 472, true)
+);
 
 updateLibrary();
