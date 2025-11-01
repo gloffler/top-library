@@ -1,5 +1,11 @@
 const library = [];
 
+const addBtn = document.getElementById("add");
+const titleInput = document.getElementById("title");
+const authorInput = document.getElementById("author");
+const readInput = document.getElementById("read");
+const tableBody = document.querySelector("table tbody");
+
 function Book(title, author, pages, read) {
   if (!new.target)
     throw Error("You must use the 'new' operator to call the constructor");
@@ -19,47 +25,60 @@ function addBookToLibrary(book) {
   library.push(book);
 }
 
-addBookToLibrary(new Book("The Hobbit", "Keine Ahnung", 222, true));
-addBookToLibrary(new Book("I'm gay", "Alois Preisinger", 562, false));
+function updateLibrary() {
+  tableBody.innerHTML = "";
+  library.forEach((book) => {
+    const row = document.createElement("tr");
 
-const addBtn = document.getElementById("add");
-const titleInput = document.getElementById("title");
-const authorInput = document.getElementById("author");
-const readInput = document.getElementById("read");
-const tableBody = document.querySelector("table tbody");
+    const titleCell = document.createElement("td");
+    titleCell.textContent = book.title;
+    row.appendChild(titleCell);
+
+    const authorCell = document.createElement("td");
+    authorCell.textContent = book.author;
+    row.appendChild(authorCell);
+
+    const pagesCell = document.createElement("td");
+    pagesCell.textContent = book.pages;
+    row.appendChild(pagesCell);
+
+    const readCell = document.createElement("td");
+    readCell.textContent = book.read ? "Read" : "Not read";
+    row.appendChild(readCell);
+
+    const removeBtn = document.createElement("button");
+    removeBtn.textContent = "Remove";
+    removeBtn.classList = "remove";
+    row.appendChild(removeBtn);
+
+    removeBtn.addEventListener("click", () => {
+      tableBody.removeChild(row);
+    });
+
+    tableBody.appendChild(row);
+  });
+}
 
 addBtn.addEventListener("click", () => {
   if (!titleInput.value || !authorInput.value)
     alert("Please fill in all fields");
+  else {
+    let newBook = new Book(
+      titleInput.value,
+      authorInput.value,
+      222,
+      readInput.checked
+    );
+    addBookToLibrary(newBook);
+    updateLibrary();
+    titleInput.value = "";
+    authorInput.value = "";
+    readInput.checked = false;
+  }
 });
 
-library.forEach((book) => {
-  const row = document.createElement("tr");
+// Demo content
+addBookToLibrary(new Book("The Hobbit", "Keine Ahnung", 222, true));
+addBookToLibrary(new Book("I'm gay", "Alois Preisinger", 562, false));
 
-  const titleCell = document.createElement("td");
-  titleCell.textContent = book.title;
-  row.appendChild(titleCell);
-
-  const authorCell = document.createElement("td");
-  authorCell.textContent = book.author;
-  row.appendChild(authorCell);
-
-  const pagesCell = document.createElement("td");
-  pagesCell.textContent = book.pages;
-  row.appendChild(pagesCell);
-
-  const readCell = document.createElement("td");
-  readCell.textContent = book.read ? "Read" : "Not read";
-  row.appendChild(readCell);
-
-  const removeBtn = document.createElement("button");
-  removeBtn.textContent = "Remove";
-  removeBtn.classList = "remove";
-  row.appendChild(removeBtn);
-
-  removeBtn.addEventListener("click", () => {
-    tableBody.removeChild(row);
-  });
-
-  tableBody.appendChild(row);
-});
+updateLibrary();
