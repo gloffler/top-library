@@ -2,6 +2,10 @@
 
 Simple library manager built for The Odin Project, allowing users to add and track books through a lightweight in-browser interface.
 
+## Live Demo
+
+[https://gloffler.github.io/top-library/](https://gloffler.github.io/top-library/)
+
 ![Library interface](screenshot.png)
 
 ## Features
