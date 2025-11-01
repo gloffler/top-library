@@ -3,6 +3,7 @@ const library = [];
 const addBtn = document.getElementById("add");
 const titleInput = document.getElementById("title");
 const authorInput = document.getElementById("author");
+const pagesInput = document.getElementById("pages");
 const readInput = document.getElementById("read");
 const tableBody = document.querySelector("table tbody");
 
@@ -66,13 +67,14 @@ addBtn.addEventListener("click", () => {
     let newBook = new Book(
       titleInput.value,
       authorInput.value,
-      222,
+      pagesInput.value,
       readInput.checked
     );
     addBookToLibrary(newBook);
     updateLibrary();
     titleInput.value = "";
     authorInput.value = "";
+    pagesInput.value = "";
     readInput.checked = false;
   }
 });
