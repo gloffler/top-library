@@ -83,7 +83,7 @@ th {
   font-weight: inherit;
 }
 
-th:last-child {
+tbody th:last-child {
   border: none;
   width: 100px;
   margin-left: 10px;
