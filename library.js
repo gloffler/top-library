@@ -61,7 +61,7 @@ function updateLibrary() {
 }
 
 addBtn.addEventListener("click", () => {
-  if (!titleInput.value || !authorInput.value)
+  if (!titleInput.value || !authorInput.value || !pagesInput.value)
     alert("Please fill in all fields");
   else {
     let newBook = new Book(
