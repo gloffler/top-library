@@ -4,7 +4,7 @@ Simple library manager built for The Odin Project, allowing users to add and tra
 
 ## Live Demo
 
-[https://gloffler.github.io/top-library/](https://gloffler.github.io/top-library/)
+[https://gloffler.github.io/top-library](https://gloffler.github.io/top-library/)
 
 ![Library interface](screenshot.png)
 
