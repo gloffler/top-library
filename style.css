@@ -37,6 +37,10 @@ input {
   padding-left: 5px;
 }
 
+input::placeholder {
+  font-style: italic;
+}
+
 button {
   border: none;
   border-radius: 5px;
