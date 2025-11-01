@@ -88,13 +88,27 @@ td {
   font-weight: inherit;
 }
 
-tbody td:last-child {
+.title {
+  width: 40%;
+}
+
+.author {
+  width: 30%;
+}
+
+.pages,
+.read {
+  width: 15%;
+}
+
+.invisible {
   border: none;
-  width: 100px;
+  width: 70px;
 }
 
 .remove {
   color: red;
-  width: 80%;
+  width: 70px;
   height: 25px;
+  margin-left: 10px;
 }
