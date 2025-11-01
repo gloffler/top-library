@@ -54,6 +54,10 @@ function updateLibrary() {
 
     removeBtn.addEventListener("click", () => {
       tableBody.removeChild(row);
+      library.splice(
+        library.findIndex((i) => i.id === book.id),
+        1
+      );
     });
 
     tableBody.appendChild(row);
