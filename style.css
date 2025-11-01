@@ -4,6 +4,7 @@
   --text-light: white;
   --bg-dark: hsl(0, 0%, 4%);
   --bg-lighter: hsl(0, 0%, 15%);
+  --bg-light: hsl(0, 0%, 20%);
   --bg-lighter-hover: hsl(0, 0%, 20%);
 }
 
@@ -64,4 +65,32 @@ button:hover {
   display: flex;
   align-items: center;
   gap: 5px;
+}
+
+table {
+  width: 100%;
+  margin-top: 1rem;
+  border-spacing: 0;
+}
+
+thead {
+  font-weight: bold;
+}
+
+th {
+  border: 1px solid var(--bg-light);
+  padding: 5px 0 5px 0;
+  font-weight: inherit;
+}
+
+th:last-child {
+  border: none;
+  width: 100px;
+  margin-left: 10px;
+}
+
+.remove {
+  color: red;
+  width: 80%;
+  height: 25px;
 }
