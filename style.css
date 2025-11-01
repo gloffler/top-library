@@ -77,16 +77,20 @@ thead {
   font-weight: bold;
 }
 
-th {
+td {
+  text-align: center;
+}
+
+th,
+td {
   border: 1px solid var(--bg-light);
   padding: 5px 0 5px 0;
   font-weight: inherit;
 }
 
-tbody th:last-child {
+tbody td:last-child {
   border: none;
   width: 100px;
-  margin-left: 10px;
 }
 
 .remove {
