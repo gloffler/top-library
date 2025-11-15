@@ -1,3 +1,7 @@
 # MacOS files
 .DS_STORE
 ._*
+
+# node
+node_modules/
+build/
